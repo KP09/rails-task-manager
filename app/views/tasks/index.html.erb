@@ -1,0 +1,23 @@
+<table class="todo-list">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Todo</th>
+      <th>Description</th>
+      <th>Due date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tasks.each do |task| %>
+      <tr>
+        <td id="col-id"><%= task.id %></td>
+        <td id="col-name"><%= task.name %></td>
+        <td id="col-descr"><%= task.description %></td>
+        <td id="col-due"><%= task.due_date %></td>
+        <td id="col-view"><%= link_to "View more", task_path(task) %></td>
+        <td id="col-edit"><%= link_to "Edit", edit_task_path(task) %></td>
+        <td id="col-delete"><%= link_to "Delete", task_path(task), method: :delete, data: { confirm: "Are you sure?" } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,3 +1,35 @@
 // Place all the styles related to the tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  font-family: sans-serif;
+}
+.todo-list, th, td {
+  border: 1px solid gray;
+  line-height: 25px;
+}
+
+th {
+  line-height: 30px;
+}
+
+#col-id {
+  width: 50px;
+}
+#col-name {
+  width: 150px;
+}
+#col-descr {
+  width: 250px;
+}
+#col-due {
+  width: 100px;
+}
+#col-view {
+  width: 100px;
+  text-align: center;
+}
+#col-edit, #col-delete {
+  width: 75px;
+  text-align: center;
+}
